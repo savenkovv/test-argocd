@@ -7,4 +7,4 @@ metadata:
     argocd.argoproj.io/secret-type: repository
 stringData:
   type: git
-  url: ttps://github.com/savenkovv/test-argocd.git
+  url: https://github.com/savenkovv/test-argocd.git
