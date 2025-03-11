@@ -1,4 +1,4 @@
-apiVersion: test-argo/v1alpha1
+apiVersion: test-argo/v1alpha11
 kind: Application
 metadata:
   name: root-app
