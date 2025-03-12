@@ -50,9 +50,6 @@ spec:
             enabled: false
           admissionWebhooks:
             enabled: true
-          serviceAccount:
-            create: true
-            name: ""
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
