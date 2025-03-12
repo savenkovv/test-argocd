@@ -17,8 +17,8 @@ spec:
       values: 
         |
         prometheusOperator:
-            admissionWebhooks:
-            enabled: false
+          admissionWebhooks:
+          enabled: false
         grafana:
           enabled: true
           service:
