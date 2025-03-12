@@ -14,8 +14,7 @@ spec:
     targetRevision: 60.1.0
     helm:
       releaseName: prometheus
-      values: 
-        |
+      values: |
         grafana:
           enabled: true
           service:
@@ -45,6 +44,8 @@ spec:
           enabled: false
 
         prometheus:
+          enabled: true
+
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
@@ -55,7 +56,6 @@ spec:
                       storage: 10Gi
             podMonitorSelectorNilUsesHelmValues: false
             serviceMonitorSelectorNilUsesHelmValues: false
-          
           
   syncPolicy:
     automated:
