@@ -45,6 +45,11 @@ spec:
 
         prometheus:
           prometheusSpec:
+            prometheusOperator:
+              tls:
+                enabled: false
+              admissionWebhooks:
+                enabled: false
             storageSpec: 
               volumeClaimTemplate:
                 spec:
