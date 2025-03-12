@@ -54,7 +54,9 @@ spec:
 
         prometheus:
           enabled: true
-
+          serviceAccount:
+              create: true
+              name: ""
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
