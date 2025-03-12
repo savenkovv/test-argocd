@@ -21,6 +21,9 @@ spec:
             enabled: false
           admissionWebhooks:
             enabled: false
+          serviceAccount:
+            create: true
+            name: ""  
         grafana:
           enabled: true
           service:
