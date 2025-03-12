@@ -16,14 +16,6 @@ spec:
       releaseName: prometheus
       values: 
         |
-        prometheusOperator:
-          tls:
-            enabled: false
-          admissionWebhooks:
-            enabled: false
-          serviceAccount:
-            create: true
-            name: ""  
         grafana:
           enabled: true
           service:
@@ -53,10 +45,14 @@ spec:
           enabled: false
 
         prometheus:
-          enabled: true
+          prometheusOperator:
+          tls:
+            enabled: false
+          admissionWebhooks:
+            enabled: false
           serviceAccount:
-              create: true
-              name: ""
+            create: true
+            name: ""
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
