@@ -43,13 +43,6 @@ spec:
         alertmanager:
           enabled: false
 
-        # prometheusOperator:
-        #   enabled: true
-        #   tls:
-        #     enabled: false
-        #   admissionWebhooks:
-        #     enabled: false
-
         prometheus:
           prometheusSpec:
             storageSpec: 
