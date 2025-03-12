@@ -45,10 +45,6 @@ spec:
           enabled: false
 
         prometheus:
-          prometheusOperator:
-          enabled: false
-          admissionWebhooks:
-            enabled: true
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
