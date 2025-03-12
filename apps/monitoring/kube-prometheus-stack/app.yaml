@@ -46,8 +46,7 @@ spec:
 
         prometheus:
           prometheusOperator:
-          tls:
-            enabled: false
+          enabled: false
           admissionWebhooks:
             enabled: true
           prometheusSpec:
