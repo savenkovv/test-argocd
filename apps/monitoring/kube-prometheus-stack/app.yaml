@@ -45,11 +45,6 @@ spec:
 
         prometheus:
           prometheusSpec:
-            prometheusOperator:
-              tls:
-                enabled: false
-              admissionWebhooks:
-                enabled: false
             storageSpec: 
               volumeClaimTemplate:
                 spec:
@@ -57,6 +52,11 @@ spec:
                   resources:
                     requests:
                       storage: 10Gi
+        prometheusOperator:
+          tls:
+            enabled: false
+          admissionWebhooks:
+            enabled: false              
           
   syncPolicy:
     automated:
