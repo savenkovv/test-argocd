@@ -43,6 +43,12 @@ spec:
         alertmanager:
           enabled: false
 
+        prometheusOperator:
+          tls:
+            enabled: false
+          admissionWebhooks:
+            enabled: false  
+              
         prometheus:
           prometheusSpec:
             storageSpec: 
@@ -52,11 +58,7 @@ spec:
                   resources:
                     requests:
                       storage: 10Gi
-        prometheusOperator:
-          tls:
-            enabled: false
-          admissionWebhooks:
-            enabled: false              
+          
           
   syncPolicy:
     automated:
