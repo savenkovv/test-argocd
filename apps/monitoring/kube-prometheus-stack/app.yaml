@@ -44,7 +44,6 @@ spec:
           enabled: false
 
         prometheus:
-          enabled: true
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
