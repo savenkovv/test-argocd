@@ -53,8 +53,6 @@ spec:
                   resources:
                     requests:
                       storage: 10Gi
-            podMonitorSelectorNilUsesHelmValues: false
-            serviceMonitorSelectorNilUsesHelmValues: false
           
   syncPolicy:
     automated:
