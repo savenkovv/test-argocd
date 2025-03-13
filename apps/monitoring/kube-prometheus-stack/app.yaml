@@ -11,7 +11,7 @@ spec:
   source:
     chart: kube-prometheus-stack
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 69.8.2
+    targetRevision: HEAD
     helm:
       releaseName: prometheus
       values: |
@@ -44,6 +44,8 @@ spec:
           enabled: false
 
         prometheus:
+          enabled: true
+
           prometheusSpec:
             storageSpec: 
               volumeClaimTemplate:
@@ -52,7 +54,8 @@ spec:
                   resources:
                     requests:
                       storage: 10Gi
-          
+            podMonitorSelectorNilUsesHelmValues: false
+            serviceMonitorSelectorNilUsesHelmValues: false
           
   syncPolicy:
     automated:
@@ -61,4 +64,3 @@ spec:
     syncOptions:
     - CreateNamespace=true
     - ServerSideApply=true
-    
